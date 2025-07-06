@@ -1,16 +1,74 @@
-# Restaurant-tips-analysis
-# Introduction
-![image](https://github.com/user-attachments/assets/27630df5-f5c8-4c6b-80f6-4ff1f7b45dab)
-This project aims to use the restaurant tips dataset to practice creating composition plots and visualizations. We will examine the relationship between different variables and the tips given.
-The dataset consists of information from 244 restaurant bills, collected in the US in 1987.
-It includes details about the tips given to restaurant staff, such as the total bill, tip amount, gender of the person paying, smoking status, day of the week, time of day, and party size.
+# 🍽️ Restaurant Tips Analysis
 
-# Data import
-# PUT YOUR CODE HERE
-import pandas as pd
-import matplotlib.pyplot as plt
-# PUT YOUR CODE HERE
-df = pd.read_csv('https://raw.githubusercontent.com/RusAbk/sca_datasets/main/tips.csv')
+Phân tích hành vi tip trong nhà hàng dựa trên các yếu tố như giới tính, thời điểm, thói quen hút thuốc và ngày trong tuần. Dự án sử dụng dữ liệu thực tế từ Mỹ năm 1987 để thực hành phân tích dữ liệu bằng Python và trực quan hóa với Matplotlib.
 
+---
 
+## 📊 Dataset Overview
 
+- 📌 Nguồn: [Tips Dataset on GitHub](https://raw.githubusercontent.com/RusAbk/sca_datasets/main/tips.csv)
+- 📦 Số dòng: 244
+- 📅 Thu thập: Mỹ, năm 1987
+- 🔍 Các cột chính:
+  - `total_bill`: Tổng số tiền hóa đơn (USD)
+  - `tip`: Số tiền tip (USD)
+  - `sex`: Giới tính người thanh toán
+  - `smoker`: Người hút thuốc hay không
+  - `day`: Ngày trong tuần
+  - `time`: Bữa trưa hoặc tối
+  - `size`: Quy mô nhóm khách hàng
+
+---
+
+## 🎯 Mục tiêu phân tích
+
+- So sánh hành vi tip giữa người hút thuốc và không hút thuốc
+- Phân tích mức tip theo giới tính
+- Phân tích mức tip theo thời điểm (Lunch vs Dinner)
+- Phân tích ảnh hưởng của ngày trong tuần đến số tiền tip
+- Trực quan hóa dữ liệu qua biểu đồ histogram
+
+---
+
+## 🔧 Kỹ thuật sử dụng
+
+- Ngôn ngữ: Python
+- Thư viện: `pandas`, `matplotlib`
+- Kỹ thuật:
+  - Xử lý dữ liệu cơ bản
+  - Tính toán thống kê trung tâm (mean, median, min, max)
+  - Biểu đồ histogram
+  - So sánh phân phối giữa các nhóm
+
+---
+
+## 📈 Kết luận chính
+
+| Câu hỏi                                 | Kết luận                                    |
+|-----------------------------------------|---------------------------------------------|
+| **Nam giới có tip nhiều hơn không?**     | ✅ Có – tip cao hơn nữ giới xét về giá trị  |
+| **Cuối tuần có nhiều tip hơn không?**    | ✅ Có – đặc biệt vào Thứ Bảy và Chủ Nhật     |
+| **Bữa tối có nhiều tip hơn không?**      | ✅ Có – Dinner có hóa đơn và tip cao hơn     |
+
+---
+
+## 🧪 Cách chạy mã
+
+1. Clone hoặc tải project:
+
+```bash
+git clone https://github.com/your-username/restaurant-tips-analysis.git
+cd restaurant-tips-analysis
+```
+## Cài đặt thư viện cần thiết:
+pip install pandas matplotlib
+## Chạy file .ipynb hoặc .py:
+python tips_analysis.py
+
+## 📁 Cấu trúc thư mục
+restaurant-tips-analysis/
+│
+├── tips_analysis.ipynb      # Notebook phân tích chính
+├── tips_analysis.py         # Phiên bản Python script
+├── README.md                # Tài liệu mô tả dự án
+└── /figures                 # (Tùy chọn) Lưu hình ảnh trực quan hóa
